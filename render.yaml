@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: asmya-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+
+  - type: static
+    name: asmya-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
